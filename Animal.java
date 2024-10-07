@@ -1,4 +1,4 @@
-import java.utils.ArrayList
+import java.util.ArrayList;
 
 public class Animal {
     private String name;
@@ -22,7 +22,7 @@ public class Animal {
         }
     }
 
-    static void setName(String newName) {
+    public void setName(String newName) {
         this.name = newName;
         if (newName.contains("Lon")) {
             this.ableToWalk = true;
@@ -39,15 +39,15 @@ public class Animal {
         }
     }
 
-    static String getName() {
+    public String getName() {
         return this.name;
     }
 
-    static boolean isAbleToWalk() {
+    public boolean isAbleToWalk() {
         return this.ableToWalk;
     }
 
-    static boolean isAbleToSwim() {
+    public boolean isAbleToSwim() {
         return this.ableToSwim;
     }
 
@@ -61,7 +61,7 @@ public class Animal {
 
     public static void printAnimalsSwim(ArrayList<Animal> animals) {
         for (Animal animal : animals) {
-            if (animal.isAbleToSwin()) {
+            if (animal.isAbleToSwim()) {
                 System.out.println("Animal: " + animal.getName());
             }
         }
@@ -82,7 +82,7 @@ public class Animal {
         animals.add(a4);
         Animal a5 = new Animal("Vit1");
         animals.add(a5);
-        
+
         printAnimalsSwim(animals);
         printAnimalsWalk(animals);
     }
